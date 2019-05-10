@@ -18,3 +18,5 @@ To run the code, a working Python 2.7 distribution is necessary, and the newest 
 	* numpy
 	* pickle
 	* matplotlib
+
+To run the demonstration file, a working IPython distribution is necessary. Alternatively, you could consider using [Colab](https://colab.research.google.com) to run the file in the cloud. A static HTML of the demo will render in browser if you view the file on github.
