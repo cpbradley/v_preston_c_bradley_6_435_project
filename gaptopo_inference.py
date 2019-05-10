@@ -98,7 +98,7 @@ def covPTM(T, Z, Cov, posterior_func, niter, R=10, sig_o=0.1, sig_t=0.1, max_ran
     if filename is not None:
         # save samples to a pickle for processing later
         with open(filename, 'wb') as fp:
-            pickle.dump(ptm, fp)
+            pickle.dump(cptm, fp)
 
     if visualize:
         # show a figure of the detections from the original topology
@@ -141,7 +141,7 @@ def metropolis_hastings(T, Z, Cov, posterior_func, niter, R=10, sig_o=0.1, sig_t
     _, denum = posterior_func(T, Z, Cov, R, sig_o, sig_t, max_range, max_penalty, likelihood_type)
 
     for i in range(niter):
-        if i % 10 == 0:
+        if i % 100 == 0:
             print 'Samples so far: ', i #print a sample update
 
         # draw proposal
